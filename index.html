@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingenieria de sistemas</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
 </head>
 
 <body>
@@ -14,37 +15,177 @@
 
         <nav>Menu
             <div class="navegadores">
-                <a href="#secInicio">Inicio</a>
+                <a href="#" onclick="mostrarSeccion('secInicio')">Inicio</a>
             </div>
 
             <div class="navegadores">
-                <a href="#secPrograma">Programa</a>
+                <a href="#" onclick="mostrarSeccion('secPrograma')">Programa</a>
             </div>
 
             <div class="navegadores">
-                <a href="#secFormación">Formación</a>
+                <a href="#" onclick="mostrarSeccion('secFormacion')">Formación</a>
             </div>
-            <div class="navegadores">Pensum</div>
+
+            <div class="navegadores">
+                <a href="#" onclick="mostrarSeccion('secPensum')">Plan de estudio</a>
+            </div>
+
         </nav>
 
     </Header>
     <Main>
         <section id="secInicio">
-            <H1>Ingeniería de Sistemas</H1>
+            <h1 class="animate__animated animate__bounce">
+                Ingeniería de Sistemas
+            </h1>
             <p>Formación para el desarrollo de soluciones tecnológicas</p>
             <div id="BtnProgama">Conoce el programa</div>
         </section>
 
-        <section id="secInicio">
-            <H1>Ingeniería de Sistemas</H1>
+        <section id="secPrograma">
+            <h2>Sobre el programa</h2>
+
+            <p>El Programa Ingeniería de Sistemas, tiene el propósito de desarrollar procesos de formación integral de
+                profesionales , mediante una formación integral que aborda los conocimientos propios de las ciencias
+                básicas, la ingeniería, el campo tecnológico, investigativo, socio-humanista </p>
+            <div>imagen</div>
+            <div id="CajaInformacion">
+                <h3>Información general</h3>
+                <p>Titulo que otorga: Ingeniero de sistemas </p>
+                <p>Modalidad: Presencial</p>
+                <p>Duración: 10 semestres</p>
+                <p>Créditos académicos:178</p>
+                <p>
+                    Acuerdo de creación: <a href="Documentos/Acuerdo 016.pdf" target="_blank">Acuerdo 16 de 2004</a>
+                </p>
+                <p>Resolución Registro Calificado: <a href="Documentos/Resolucion 1562 - Registro Calificado.pdf"
+                        target="_blank">00156 de 2022</a></p>
+                <p>Código SNIES: 52384</p>
+                <p>Lugar : Florencia -Caquetá, Campus Florencia</p>
+            </div>
+            <div id="cajaUbicacion">
+                <p>Florencia
+                    <a href="https://maps.app.goo.gl/Yzy6JPk4N4BUDQYG8" target="_blank">Carrera #3, Florencia,
+                        Caquetá</a>
+                </p>
+            </div>
+
+            <!-- <div id="cajaDocumentos">
+                <ul>
+                    <li><a href=""></a></li>
+                </ul>
+            </div> -->
+
+            <div id="cajaMision">
+                <h3>Misión</h3>
+                <p>El programa académico Ingeniería de Sistemas de la Universidad de la Amazonia, asume como encargo
+                    social la formación de profesionales íntegros, con capacidad para crear, innovar, formular y
+                    solucionar problemáticas organizacionales y productivas, apoyados en el desarrollo de sistemas de
+                    información soportados en las diferentes tecnologías informáticas, con el propósito de contribuir al
+                    desarrollo social, económico y tecnológico de la región amazónica y del país. </p>
+            </div>
+
+            <div id="cajaVision">
+                <h3>Visión</h3>
+                <p>Ingeniería de Sistemas será un programa académico en permanente acreditación académica y social,
+                    líder en la formación integral de profesionales, competentes en el campo académico, investigativo y
+                    humanístico; comprometidos con el desarrollo tecnológico de la región amazónica y del país apoyados
+                    en tecnologías de información.</p>
+            </div>
+
+        </section>
+
+        <section id="secFormacion">
+            <h2>Formación</h2>
+            <p>La formación del programa de Ingeniería de Sistemas integra conocimientos científicos, tecnológicos e
+                investigativos para preparar profesionales capaces de diseñar soluciones digitales para resolver a los
+                desafíos del entorno.</p>
+
+            <div class="cajaFormacion">
+                <h4>Ciencias Básicas</h4>
+                <figure>
+                    <img src="" alt="">
+                </figure>
+                <p>Proporciona los fundamentos matemáticos, científicos y lógicos necesarios para el análisis y solución
+                    de problemas de ingeniería.</p>
+            </div>
+
+            <div class="cajaFormacion">
+                <h4>Desarrollo Tecnológico</h4>
+                <figure>
+                    <img src="" alt="">
+                </figure>
+                <p>Desarrolla habilidaes para crear, implementar y administrar soluciones informáticas mediante el uso
+                    de tecnologías actuales</p>
+            </div>
+
+            <div class="cajaFormacion ">
+                <h4>Investigación e Innovación</h4>
+                <figure>
+                    <img src="" alt="">
+                </figure>
+                <p>Fomentala capacidad de investigar, analizar necesidades y generar propuestas tecnológicas que aporten
+                    al desarrollo regional y nacional</p>
+            </div>
+
+            <div class="cajaFormacion ">
+                <h4>Formación Socio-Humanística</h4>
+                <figure>
+                    <img src="" alt="">
+                </figure>
+                <p>Fortalece las competencias éticas, comunicativas y sociales necesarias para ejercer con
+                    responsabilidad y ética profesional </p>
+            </div>
+        </section>
+
+        <section id="secPensum">
+            <h2>Pensum</h2>
             <p>Formación para el desarrollo de soluciones tecnológicas</p>
-            <div id="BtnProgama">Conoce el programa</div>
+
         </section>
 
     </Main>
     <footer>
         <div id="contacto">Contacto</div>
     </footer>
+    <script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function mostrarSeccion(id) {
+
+            let secciones = document.querySelectorAll("section");
+
+            secciones.forEach(function (seccion) {
+                seccion.style.display = "none";
+                seccion.classList.remove("animate__animated", "animate__fadeIn");
+            });
+
+
+            let seccionSeleccionada = document.getElementById(id);
+
+            seccionSeleccionada.style.display = "block";
+
+            seccionSeleccionada.classList.add(
+                "animate__animated",
+                "animate__fadeIn"
+            );
+
+        }
+
+        mostrarSeccion("secInicio");
+
+    </script>
 </body>
 
 </html>
