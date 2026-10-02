@@ -5,93 +5,209 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingenieria de sistemas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 
 <body>
-    <Header>
-        <div id="Imagen">Universidad de la Amazonia</div>
 
-        <nav>Menu
-            <div class="navegadores">
-                <a href="#" onclick="mostrarSeccion('secInicio')">Inicio</a>
+    <nav>
+        <div class="logo">
+            <img src="Imagenes/Logo_amazonia-removebg-preview.png" alt="Logo universidad">
+            <div class="texto">
+                <h1>Programa Ingeniería de Sistemas</h1>
+                <p>Universidad de la Amazonia</p>
             </div>
+        </div>
 
-            <div class="navegadores">
-                <a href="#" onclick="mostrarSeccion('secPrograma')">Programa</a>
-            </div>
 
-            <div class="navegadores">
-                <a href="#" onclick="mostrarSeccion('secFormacion')">Formación</a>
-            </div>
+        <div class="enlaces">
+            <a class="botones" href="#" onclick="mostrarSeccion('secInicio')">Inicio</a>
+            <a class="botones" href="#" onclick="mostrarSeccion('secPrograma')">Programa</a>
+            <a class="botones" href="#" onclick="mostrarSeccion('secFormacion')">Formación</a>
+            <a class="botones" href="#" onclick="mostrarSeccion('secPensum')">Plan de Estudios</a>
+        </div>
+    </nav>
 
-            <div class="navegadores">
-                <a href="#" onclick="mostrarSeccion('secPensum')">Plan de estudio</a>
-            </div>
-
-        </nav>
-
-    </Header>
     <Main>
+
         <section id="secInicio">
-            <h1 class="animate__animated animate__bounce">
-                Ingeniería de Sistemas
-            </h1>
-            <p>Formación para el desarrollo de soluciones tecnológicas</p>
-            <div id="BtnProgama">Conoce el programa</div>
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
+                <div class="carousel-item active" data-bs-interval="2500">
+                    <div class="imagenfondo" style="background-image: url('Imagenes/Fachada_UNIAMAZONIA.webp');">
+                    </div>
+                </div>
+                <div class="carousel-item active" data-bs-interval="2500">
+                    <div class="imagenfondo" style="background-image: url('Imagenes/Imagen.jpg');">
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2500">
+                    <div class="imagenfondo" style="background-image: url('Imagenes/conchaCustica.jpeg');">
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2500">
+                    <div class="imagenfondo" style="background-image: url('Imagenes/AulasSistemas.jpg');"></div>
+                </div>
+
+            </div>
+
+            <div class="FondoOscuro"></div>
+            <div class="contenidoPrincipal">
+                <h1 class="animate__animated animate__fadeInDown animate__slow">
+                    Ingeniería de<br>Sistemas
+                </h1>
+                <p class="animate__animated animate__fadeInUp animate__delay-0.5s">
+                    Formación integral para el desarrollo de soluciones tecnológicas
+                    <br>que innovan y transforman la región amazónica.
+                </p>
+
+                <div class="Cajabotones animate__animated animate__zoomIn animate__delay-1s">
+                    <a class="btnPrincipal" href="#" onclick="mostrarSeccion('secPrograma')">
+                        Conoce el programa
+                    </a>
+                </div>
+
+                <div class="cajaBos animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="item"><i class="bi bi-clock-history"></i> 10 Semestres</div>
+                    <div class="item"><i class="bi bi-person-video3"></i> Presencial</div>
+                    <div class="item"><i class="bi bi-sun"></i> Diurno</div>
+                    <div class="item"><i class="bi bi-journal-check"></i> 178 Créditos</div>
+                </div>
+            </div>
+
+
+
+
+            <div class="containerLogo">
+                <img class="imgLogo" src="Imagenes/IconoSistemas-removebg-preview.png" alt="Ave interactiva" >
+
+
+                <div class="hotspot roja">
+                    <div class="ventana-info info-roja">
+                        <h4>Propósito</h4>
+                        <p>Formar profesionales capaces de resolver problemas complejos.</p>
+                    </div>
+                </div>
+
+                <div class="hotspot azul">
+                    <div class="ventana-info info-azul">
+                        <h4>Requisitos</h4>
+                        <p>Aptitud matemática y pasión por la tecnología.</p>
+                    </div>
+                </div>
+
+                <div class="hotspot verde">
+                    <div class="ventana-info info-verde">
+                        <h4>Perfil Profesional</h4>
+                        <p>Desarrollador, Arquitecto de Software y Analista de Datos.</p>
+                    </div>
+                </div>
+                <div class="hotspot naranja">
+                    <div class="ventana-info info-naranja">
+                        <h4>Perfil Profesional</h4>
+                        <p>Desarrollador, Arquitecto de Software y Analista de Datos.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
         </section>
 
+
+
+
+
         <section id="secPrograma">
-            <h2>Sobre el programa</h2>
+            <div class="container">
 
-            <p>El Programa Ingeniería de Sistemas, tiene el propósito de desarrollar procesos de formación integral de
-                profesionales , mediante una formación integral que aborda los conocimientos propios de las ciencias
-                básicas, la ingeniería, el campo tecnológico, investigativo, socio-humanista </p>
-            <div>imagen</div>
-            <div id="CajaInformacion">
-                <h3>Información general</h3>
-                <p>Titulo que otorga: Ingeniero de sistemas </p>
-                <p>Modalidad: Presencial</p>
-                <p>Duración: 10 semestres</p>
-                <p>Créditos académicos:178</p>
-                <p>
-                    Acuerdo de creación: <a href="Documentos/Acuerdo 016.pdf" target="_blank">Acuerdo 16 de 2004</a>
-                </p>
-                <p>Resolución Registro Calificado: <a href="Documentos/Resolucion 1562 - Registro Calificado.pdf"
-                        target="_blank">00156 de 2022</a></p>
-                <p>Código SNIES: 52384</p>
-                <p>Lugar : Florencia -Caquetá, Campus Florencia</p>
-            </div>
-            <div id="cajaUbicacion">
-                <p>Florencia
-                    <a href="https://maps.app.goo.gl/Yzy6JPk4N4BUDQYG8" target="_blank">Carrera #3, Florencia,
-                        Caquetá</a>
-                </p>
+                <h2>Sobre el programa</h2>
+
+                <p>El Programa Ingeniería de Sistemas, tiene el propósito de desarrollar procesos de formación integral
+                    de
+                    profesionales , mediante una formación integral que aborda los conocimientos propios de las ciencias
+                    básicas, la ingeniería, el campo tecnológico, investigativo, socio-humanista </p>
+                <div>imagen</div>
+
+                <div id="CajaInformacion">
+                    <h3>Información general</h3>
+                    <p>Titulo que otorga: Ingeniero de sistemas </p>
+                    <p>Modalidad: Presencial</p>
+                    <p>Duración: 10 semestres</p>
+                    <p>Créditos académicos:178</p>
+                    <p>Acuerdo de creación: <a href="Documentos/Acuerdo 016.pdf" target="_blank">Acuerdo 16 de 2004</a>
+                    </p>
+                    <p>Resolución Registro Calificado: <a href="Documentos/Resolucion 1562 - Registro Calificado.pdf"
+                            target="_blank">00156 de 2022</a></p>
+                    <p>Código SNIES: 52384</p>
+
+                </div>
+
+                <div id="cajaMision">
+                    <h3>Misión</h3>
+                    <p>El programa académico Ingeniería de Sistemas de la Universidad de la Amazonia, asume como encargo
+                        social la formación de profesionales íntegros, con capacidad para crear, innovar, formular y
+                        solucionar problemáticas organizacionales y productivas, apoyados en el desarrollo de sistemas
+                        de
+                        información soportados en las diferentes tecnologías informáticas, con el propósito de
+                        contribuir al
+                        desarrollo social, económico y tecnológico de la región amazónica y del país. </p>
+                </div>
+
+                <div id="cajaVision">
+                    <h3>Visión</h3>
+                    <p>Ingeniería de Sistemas será un programa académico en permanente acreditación académica y social,
+                        líder en la formación integral de profesionales, competentes en el campo académico,
+                        investigativo y
+                        humanístico; comprometidos con el desarrollo tecnológico de la región amazónica y del país
+                        apoyados
+                        en tecnologías de información.</p>
+                </div>
+
+                <div id="cajaDocumentos">
+                    <header>
+                        <h3>Documentos de interés</h3>
+                    </header>
+
+                    <ul>
+                        <li>
+                            <span><a href="Documentos/Acuerdo 19 - Por el cual se adopta la linea de investigacion Sistemas de Formacion Geografica para la facultad de ingenieria.pdf"
+                                    target="_blank">Primer documenton ejemploo</a></span>
+                        </li>
+
+                        <li>
+                            <span><a href="https://drive.google.com/drive/folders/1OjF8Tb43WolUrTwbHwLWE9UDTKP45xVQ"
+                                    target="_blank">Contenido programáticos pensum 2020</a></span>
+                        </li>
+
+                        <li>
+                            <span><a href="Documentos/Opciones de grado.pdf" target="_blank">Opciones de
+                                    grado</a></span>
+                        </li>
+
+                        <li>
+                            <span><a href="https://drive.google.com/drive/folders/14EBlcWxRo1mfWvUKeTcIXoWUWORG0KUJ"
+                                    target="_blank">Formato opción de grado</a></span>
+                        </li>
+
+                        <li>
+                            <span><a href="Documentos/FormatoNotificacion.pdf" target="_blank">Formato Notifiación
+                                    Opción de grado</a></span>
+                        </li>
+
+                        <li>
+                            <span><a href="https://drive.google.com/drive/folders/1IuMu73ZW26iHtAeWZHUp9UXN2dHLfxus"
+                                    target="_blank">Protocolo de sustentacion y socialización</a></span>
+                        </li>
+
+                        <li>
+                            <span><a href="Documentos/BROCHURE INGENIERIA DE SISTEMAS.pdf" target="_blank">Brochure
+                                    Ingeniería de Sistemas</a></span>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <!-- <div id="cajaDocumentos">
-                <ul>
-                    <li><a href=""></a></li>
-                </ul>
-            </div> -->
-
-            <div id="cajaMision">
-                <h3>Misión</h3>
-                <p>El programa académico Ingeniería de Sistemas de la Universidad de la Amazonia, asume como encargo
-                    social la formación de profesionales íntegros, con capacidad para crear, innovar, formular y
-                    solucionar problemáticas organizacionales y productivas, apoyados en el desarrollo de sistemas de
-                    información soportados en las diferentes tecnologías informáticas, con el propósito de contribuir al
-                    desarrollo social, económico y tecnológico de la región amazónica y del país. </p>
-            </div>
-
-            <div id="cajaVision">
-                <h3>Visión</h3>
-                <p>Ingeniería de Sistemas será un programa académico en permanente acreditación académica y social,
-                    líder en la formación integral de profesionales, competentes en el campo académico, investigativo y
-                    humanístico; comprometidos con el desarrollo tecnológico de la región amazónica y del país apoyados
-                    en tecnologías de información.</p>
-            </div>
 
         </section>
 
@@ -101,7 +217,7 @@
                 investigativos para preparar profesionales capaces de diseñar soluciones digitales para resolver a los
                 desafíos del entorno.</p>
 
-            <div class="cajaFormacion">
+            <div class="cajaFormacion ">
                 <h4>Ciencias Básicas</h4>
                 <figure>
                     <img src="" alt="">
@@ -110,7 +226,7 @@
                     de problemas de ingeniería.</p>
             </div>
 
-            <div class="cajaFormacion">
+            <div class="cajaFormacion ">
                 <h4>Desarrollo Tecnológico</h4>
                 <figure>
                     <img src="" alt="">
@@ -128,7 +244,7 @@
                     al desarrollo regional y nacional</p>
             </div>
 
-            <div class="cajaFormacion ">
+            <div class="cajaFormacion">
                 <h4>Formación Socio-Humanística</h4>
                 <figure>
                     <img src="" alt="">
@@ -139,52 +255,390 @@
         </section>
 
         <section id="secPensum">
-            <h2>Pensum</h2>
-            <p>Formación para el desarrollo de soluciones tecnológicas</p>
+            <div class="container">
+                <h2>Plan de estudios</h2>
+                <p>Conoce sobre el plan de estudios del programa</p>
+                <button> <a href="Documentos/Acuerdo 44 Plan de Estudios de Ingenieria de Sistemas.pdf"
+                        target="_blank">Plan de
+                        estudios</a></button>
+                <article class="semestre">
+                    <header>
+                        <h2>Semestre 1 </h2>
+                        <p>Total créditos: <strong> 18</strong></p>
+                    </header>
+                    <ul class="materias">
+                        <li>
+                            <span>MATEMATICAS I </span>
+                            <span> 3</span>
+                        </li>
+                        <li>
+                            <span>COMUNICACION </span>
+                            <span> 2</span>
+                        </li>
 
+                        <li>
+                            <span>DEPORTE Y CULTURA </span>
+                            <span> 2</span>
+                        </li>
+
+                        <li>
+                            <span>FISICA I</span>
+                            <span> 3</span>
+                        </li>
+
+                        <li>
+                            <span>LOGICA Y ALGORITMOS I</span>
+                            <span> 3</span>
+                        </li>
+
+                        <li>
+                            <span>BIOLOGIA GENERAL</span>
+                            <span> 3</span>
+                        </li>
+
+                        <li>
+                            <span>INTRODUCCION A LA INGENIERIA</span>
+                            <span> 2</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="semestre">
+                    <header>
+                        <h2>Semestre 2</h2>
+                        <p>Total créditos: <strong>17</strong></p>
+                    </header>
+                    <ul class="materias">
+                        <li>
+                            <span>TEORIA GENERAL DE SISTEMAS</span>
+                            <span>3</span>
+                        </li>
+                        <li>
+                            <span>LOGICA Y ALGORITMOS II</span>
+                            <span>3</span>
+                        </li>
+
+                        <li>
+                            <span>FISICA II</span>
+                            <span>3</span>
+                        </li>
+
+                        <li>
+                            <span>QUIMICA I</span>
+                            <span>3</span>
+                        </li>
+
+                        <li>
+                            <span>MATEMATICAS II</span>
+                            <span>3</span>
+                        </li>
+
+                        <li>
+                            <span>CONSTITUCION Y DEMOCRACIA</span>
+                            <span>2</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="semestre">
+                    <header>
+                        <h2>Semestre 3</h2>
+                        <p>Total créditos: <strong>17</strong></p>
+                    </header>
+                    <ul class="materias">
+                        <li>
+                            <span>ALGEBRA LINEAL</span>
+                            <span>3</span>
+                        </li>
+                        <li>
+                            <span>MATEMATICAS DISCRETAS</span>
+                            <span>4</span>
+                        </li>
+
+                        <li>
+                            <span>ESTRUCUTRA DE DATOS I</span>
+                            <span>4</span>
+                        </li>
+
+                        <li>
+                            <span>IDIOMA EXTRANJERO I</span>
+                            <span>2</span>
+                        </li>
+
+                        <li>
+                            <span>ANALISIS DE SISTEMAS</span>
+                            <span>4</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="semestre">
+                    <header>
+                        <h2>Semestre 4</h2>
+                        <p>Total créditos: <strong>18</strong></p>
+                    </header>
+                    <ul class="materias">
+                        <li>
+                            <span>ESTADISTICA PARA INGENIERIA</span>
+                            <span>4</span>
+                        </li>
+                        <li>
+                            <span>SISTEMAS OPERATIVOS</span>
+                            <span>3</span>
+                        </li>
+
+                        <li>
+                            <span>INGENIERIA DE SOFTWARE I</span>
+                            <span>4</span>
+                        </li>
+
+                        <li>
+                            <span>ESTRUCTURA DE DATOS II</span>
+                            <span>4</span>
+                        </li>
+
+                        <li>
+                            <span>ECUACIONES DIFERENCIALES</span>
+                            <span>3</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="semestre">
+                    <header>
+                        <h2>Semestre 5</h2>
+                        <p>Total créditos: <strong>18</strong></p>
+                    </header>
+                    <ul class="materias">
+                        <li>
+                            <span>INGENIERIA DE SOFTWARE II</span>
+                            <span>4</span>
+                        </li>
+                        <li>
+                            <span>DISEÑO DE BASE DE DATOS</span>
+                            <span>4</span>
+                        </li>
+
+                        <li>
+                            <span>IDIOMA EXTRANJERO II</span>
+                            <span>2</span>
+                        </li>
+
+                        <li>
+                            <span>PROGRAMACION WEB</span>
+                            <span>4</span>
+                        </li>
+
+                        <li>
+                            <span>METODOS NUMERICOS</span>
+                            <span>4</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="semestre">
+                    <header>
+                        <h2>Semestre 6</h2>
+                        <p>Total créditos: <strong>18</strong></p>
+                    </header>
+                    <ul class="materias">
+                        <li>
+                            <span>MODELOS DETERMINISTICOS</span>
+                            <span>4</span>
+                        </li>
+                        <li>
+                            <span>FILOSOFIA E HISTORIA DE LA CIENCIA</span>
+                            <span>2</span>
+                        </li>
+
+                        <li>
+                            <span>PROGRAMACION MOVIL</span>
+                            <span>4</span>
+                        </li>
+
+                        <li>
+                            <span>INGENIERIA DE SOFTWARE III</span>
+                            <span>4</span>
+                        </li>
+
+                        <li>
+                            <span>REDES INFORMATICAS I</span>
+                            <span>4</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="semestre">
+                    <header>
+                        <h2>Semestre 7</h2>
+                        <p>Total créditos: <strong>18</strong></p>
+                    </header>
+                    <ul class="materias">
+                        <li>
+                            <span>PROYECTOS DE SOFTWARE</span>
+                            <span>4</span>
+                        </li>
+                        <li>
+                            <span>METODOLOGIA DE LA INVESTIGACION I</span>
+                            <span>2</span>
+                        </li>
+
+                        <li>
+                            <span>REDES INFORMATICAS II</span>
+                            <span>4</span>
+                        </li>
+
+                        <li>
+                            <span>INTELIGENCIA COMPUTACIONAL I</span>
+                            <span>4</span>
+                        </li>
+
+                        <li>
+                            <span>ADMINISTRACION DE BASE DE DATOS</span>
+                            <span>4</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="semestre">
+                    <header>
+                        <h2>Semestre 8</h2>
+                        <p>Total créditos: <strong>18</strong></p>
+                    </header>
+                    <ul class="materias">
+                        <li>
+                            <span>INTELIGENCIA COMPUTACIONAL II</span>
+                            <span>4</span>
+                        </li>
+                        <li>
+                            <span>TALLER DE EMPRENDIMIENTO E INNOVACION</span>
+                            <span>3</span>
+                        </li>
+
+                        <li>
+                            <span>DESARROLLO HUMANO</span>
+                            <span>3</span>
+                        </li>
+
+                        <li>
+                            <span>ETICA</span>
+                            <span>2</span>
+                        </li>
+
+                        <li>
+                            <span>METODOLOGIA DE LA INVESTIGACION II</span>
+                            <span>2</span>
+                        </li>
+
+                        <li>
+                            <span>PLANEACION ESTRATEGICAS DE SISTEMAS DE INFORMACION</span>
+                            <span>4</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="semestre">
+                    <header>
+                        <h2>Semestre 9</h2>
+                        <p>Total créditos: <strong>16</strong></p>
+                    </header>
+                    <ul class="materias">
+                        <li>
+                            <span>GESTION TECNOLOGICA</span>
+                            <span>3</span>
+                        </li>
+                        <li>
+                            <span>UNIVERSIDAD REGION Y MEDIO AMBIENTE</span>
+                            <span>3</span>
+                        </li>
+
+                        <li>
+                            <span>ELECTIVA I</span>
+                            <span>4</span>
+                        </li>
+
+                        <li>
+                            <span>TALLER DE ESCRITURA CIENTIFICA</span>
+                            <span>2</span>
+                        </li>
+
+                        <li>
+                            <span>ELECTIVA II</span>
+                            <span>4</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="semestre">
+                    <header>
+                        <h2>Semestre 10</h2>
+                        <p>Total créditos: <strong>10</strong></p>
+                    </header>
+                    <ul class="materias">
+                        <li>
+                            <span>OPCION DE GRADO</span>
+                            <span>10</span>
+                        </li>
+                        <li>
+                            <span>ELECTIVA IV</span>
+                            <span>4</span>
+                        </li>
+
+                        <li>
+                            <span>ELECTIVA III</span>
+                            <span>4</span>
+                        </li>
+                    </ul>
+                </article>
+            </div>
         </section>
-
     </Main>
+
     <footer>
-        <div id="contacto">Contacto</div>
+        <div class="container">
+
+
+            <p>Coordinadora de Programa: Paula Andrea Chica Murcia</p>
+            <p>Correo electrónico: <a href="pisistemas@uniamazonia.edu.co">pisistemas@uniamazonia.edu.co</a></p>
+
+            <div class="cajaWhast">
+                <a href="https://wa.me/3204541936" class="btn btn-success btn-lg px-4" target="_blank"> <i
+                        class="bi bi-whatsapp me-2"></i> Hablar con un Asesor</a>
+            </div>
+
+            <div class="cajaUbicacion fle">
+                <i class="bi bi-geo-alt-fill display-4 mb-3"></i>
+                <p class="mb-4">Florencia, Caquetá<br>Campus Universitario Principal</p>
+                <a href="https://maps.app.goo.gl/Yzy6JPk4N4BUDQYG8" target="_blank"> Ver en Google Maps</a>
+            </div>
+        </div>
+
+
     </footer>
+
+
     <script>
-
-
-
-
-
-
-
-
-
-
-
-
-
         function mostrarSeccion(id) {
-
             let secciones = document.querySelectorAll("section");
-
             secciones.forEach(function (seccion) {
                 seccion.style.display = "none";
-                seccion.classList.remove("animate__animated", "animate__fadeIn");
             });
-
-
             let seccionSeleccionada = document.getElementById(id);
-
             seccionSeleccionada.style.display = "block";
-
-            seccionSeleccionada.classList.add(
-                "animate__animated",
-                "animate__fadeIn"
-            );
-
         }
-
         mostrarSeccion("secInicio");
 
+    </script>
+    <!-- Scripts de Bootstrap y AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        // Inicializar animaciones de AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
     </script>
 </body>
 
