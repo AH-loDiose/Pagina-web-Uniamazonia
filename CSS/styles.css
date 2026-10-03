@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif !important;
 }
 
 body {
@@ -64,6 +65,7 @@ nav {
 }
 
 .enlaces a {
+   
     color: white;
     text-decoration: none;
     font-size: 1rem;
@@ -81,6 +83,7 @@ nav {
         transform: translatey(-4px);
         box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.3);
     }
+
 }
 
 
@@ -174,7 +177,6 @@ main {
 
 .Cajabotones {
     display: flex;
-
     gap: 15px;
     margin-bottom: 45px;
 }
@@ -219,86 +221,184 @@ main {
     filter: drop-shadow(3px 4px 3px black);
 }
 
+.containerLogo:has(.hotspot:hover) .hotspot:not(:hover) {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+@keyframes pulso {
+    0% {
+        transform: scale(0.98);
+        box-shadow: 0 0 0 0 rgba(20, 0, 0, 0.7);
+    }
+
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
+
+    }
+
+    100% {
+        transform: scale(0.98);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
 .hotspot {
     position: absolute;
-    width: 10%;
+    width: 8%;
     height: 10%;
     border-radius: 100%;
     cursor: pointer;
-    /* background-color: rgba(255, 255, 255, 0.3); */
-background-color: yellow;
+    background: rgba(6, 43, 71, 0.5);
+    border: 1px solid #0e6ba8;
+    backdrop-filter: blur(4px);
+    animation: pulso 3.2s infinite ease-in-out;
+    z-index: 5;
+    transition: all 0.3s ease;
 
+    &:hover {
+        transform: scale(1.25);
+        background: #ffffff;
+        border-color: #0d6efd;
+        animation: none;
+    }
+
+    &:hover .ventana-info {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
 
+.hotspot i {
+    color: #ffffff;
+    font-size: 1.1rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+
+    &:hover {
+        color: #062b47;
+    }
+}
 
 .roja {
-    top: 22%;
-    right: 43%;
+    top: 20.5%;
+    right: 43.7%;
 
 }
 
 .azul {
-    top:32%;
+    top: 30%;
     right: 50%;
 }
 
 .verde {
     bottom: 45%;
-    right: 55%;
+    right: 53%;
 }
+
 .naranja {
-    top: 15%;
-    right: 34%;
+    top: 14%;
+    right: 35.5%;
 }
 
-/* LAS VENTANAS EMERGENTES (Ocultas por defecto) */
-.ventana-info {
-    position: absolute;
-    bottom: 110%;
-    /* Aparecen justo arriba de la pluma */
-    right: 0;
-    width: 250px;
-    padding: 20px;
-    color: white;
-    border-radius: 10px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
 
-    /* El truco de magia: Invisibles y un poco encogidas */
+.ventana-info {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    max-width: 550px;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 25px;
+    color: white;
+    border-radius: 12px;
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.45),
+        inset 0px 1px 1px rgba(255, 255, 255, 0.3);
+
     opacity: 0;
     visibility: hidden;
-    transform: scale(0.8) translateY(20px);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     pointer-events: none;
-    /* Para que no estorben cuando están invisibles */
-}
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 9999;
 
-/* COLORES DE LAS VENTANAS (Como en tus fotos) */
-.info-roja {
-    background-color: #ff3b30;
-}
-
-.info-azul {
-    background-color: #007aff;
 }
 
 .info-verde {
-    background-color: #34c759;
+    background: linear-gradient(135deg, rgba(34, 160, 75, 0.92) 0%, rgba(15, 80, 38, 0.95) 100%);
+    border: 1px solid rgba(110, 235, 145, 0.4);
+
+}
+
+.info-azul {
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.92) 0%, rgba(6, 43, 71, 0.95) 100%);
+    border: 1px solid rgba(130, 185, 255, 0.4);
+}
+
+.info-roja {
+    background: linear-gradient(135deg, rgba(230, 30, 50, 0.92) 0%, rgba(110, 10, 20, 0.95) 100%);
+    border: 1px solid rgba(255, 130, 140, 0.4);
 }
 
 .info-naranja {
-    background-color: #fb5607;
+    background: linear-gradient(135deg, rgba(245, 115, 30, 0.92) 0%, rgba(140, 50, 5, 0.95) 100%);
+    border: 1px solid rgba(255, 180, 120, 0.4);
 }
 
-/* REVELAR LA VENTANA AL PASAR EL MOUSE (Hover) */
-.hotspot:hover .ventana-info {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1) translateY(0);
+.titulos {
+    color: #ffffff !important;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* =========================================
-   EL PIE DE PÁGINA (FOOTER) - VERSIÓN COMPACTA
-   ========================================= */
+.p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.02rem;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 400;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.texto {
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    #lema {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 800;
+        font-style: italic;
+        color: #44db5d;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+        letter-spacing: 0.5px;
+    }
+}
+
+#icono {
+    font-size: 40px;
+}
+
+
+
+
 footer {
     grid-area: footer;
     background-color: #062b47;
